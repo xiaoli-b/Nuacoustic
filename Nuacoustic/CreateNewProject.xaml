@@ -1,0 +1,112 @@
+﻿<Page x:Class="Nuacoustic.CreateNewProject"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Nuacoustic"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="CreateNewProject">
+
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Image Source="/images/nuairelogo1.jpg" Grid.Row="0" Grid.Column="0"/>
+        <Button Name="btnSave" Content="SAVE" FontWeight="Bold" FontSize="18" Grid.Row="12" Grid.Column="5" Margin="5" Click="btnSave_Click"/>
+        <Button Name="btnBack" Content="BACK" FontWeight="Bold" FontSize="18" Grid.Row="1" Grid.Column="0" Margin="5" Click="btnBack_Click"/>
+
+
+        <TextBlock Text="Project Name" Grid.Row="1" Grid.Column="1" FontSize="13" HorizontalAlignment="center" VerticalAlignment="center"/>
+        <TextBox Name="txtProjectName" Grid.Row="1" Grid.Column="2" Background="Lightgray" Margin="5"/>
+
+        <TextBlock Text="Type of Room" Grid.Row="2" Grid.Column="1" FontSize="13" HorizontalAlignment="center" VerticalAlignment="center"/>
+        <ComboBox Name="txtTypeOfRoom" Grid.Column="2" Grid.Row="2" Background="#cccccc" FontSize="13"  Margin="5">
+            <ComboBoxItem IsSelected="True">Concert Hall</ComboBoxItem>
+            <ComboBoxItem >Bedroom</ComboBoxItem>
+            <ComboBoxItem>Living room</ComboBoxItem>
+            <ComboBoxItem>Small office</ComboBoxItem>
+            <ComboBoxItem>Large open office</ComboBoxItem>
+            <ComboBoxItem>Canteens</ComboBoxItem>
+        </ComboBox>
+
+        <TextBlock Text="Fan" Grid.Row="3" Grid.Column="1" FontSize="13" HorizontalAlignment="center" VerticalAlignment="center"/>
+        <ComboBox Name="txtFanCode" Grid.Column="2" Grid.Row="3" Background="#cccccc" FontSize="13"  Margin="5">
+            <ComboBoxItem IsSelected="True">XBC15</ComboBoxItem>
+            <ComboBoxItem >XBC25</ComboBoxItem>
+            <ComboBoxItem>XBC45</ComboBoxItem>
+            <ComboBoxItem>XBC55</ComboBoxItem>
+            <ComboBoxItem>XBC65</ComboBoxItem>
+        </ComboBox>
+
+        <TextBlock Text="Acoustic Barrier" Grid.Row="4" Grid.Column="1" FontSize="13" HorizontalAlignment="center" VerticalAlignment="center"/>
+        <ComboBox Name="txtBarrierType" Grid.Column="2" Grid.Row="4" Background="#cccccc" FontSize="13"  Margin="3.333,5.333,7,5.333">
+            <ComboBoxItem IsSelected="True">Basic</ComboBoxItem>
+            <ComboBoxItem >Acoustic Grade</ComboBoxItem>
+        </ComboBox>
+
+        <TextBlock Text="Attenuator Supply" Grid.Row="5" Grid.Column="1" FontSize="13" HorizontalAlignment="center" VerticalAlignment="center"/>
+        <ComboBox Name="txtAttenuatorSupply" Grid.Column="2" Grid.Row="5" Background="#cccccc" FontSize="13"  Margin="5">
+            <ComboBoxItem IsSelected="True">None</ComboBoxItem>
+            <ComboBoxItem >Short</ComboBoxItem>
+            <ComboBoxItem >Medium</ComboBoxItem>
+            <ComboBoxItem>Long</ComboBoxItem>
+        </ComboBox>
+
+        <TextBlock Text="Attenuator Extract" Grid.Row="6" Grid.Column="1" FontSize="13" HorizontalAlignment="center" VerticalAlignment="center"/>
+        <ComboBox Name="txtAttenuatorExtract" Grid.Column="2" Grid.Row="6" Background="#cccccc" FontSize="13"  Margin="5">
+            <ComboBoxItem IsSelected="True">None</ComboBoxItem>
+            <ComboBoxItem >Short</ComboBoxItem>
+            <ComboBoxItem >Medium</ComboBoxItem>
+            <ComboBoxItem>Long</ComboBoxItem>
+        </ComboBox>
+
+        <TextBlock Text="Room Dimensions" Grid.Row="7" Grid.Column="0" FontSize="13" HorizontalAlignment="center" VerticalAlignment="center"/>
+        <TextBlock Text="Length" Grid.Row="7" Grid.Column="1" FontSize="13" HorizontalAlignment="center" VerticalAlignment="center"/>
+        <TextBox Name="txtRoomLength" Grid.Row="7" Grid.Column="2" Background="Lightgray" Margin="5"/>
+        <TextBlock Text="Width" Grid.Row="8" Grid.Column="1" FontSize="13" HorizontalAlignment="center" VerticalAlignment="center"/>
+        <TextBox Name="txtRoomWidth" Grid.Row="8" Grid.Column="2" Background="Lightgray" Margin="5"/>
+        <TextBlock Text="Height" Grid.Row="9" Grid.Column="1" FontSize="13" HorizontalAlignment="center" VerticalAlignment="center"/>
+        <TextBox Name="txtRoomHeight" Grid.Row="9" Grid.Column="2" Background="Lightgray" Margin="5"/>
+
+        <TextBlock Text="Number of people in room (put digits)" FontSize="13" Grid.Row="10" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="0" Grid.ColumnSpan="3" Margin="41,9.667,129,4.667" Width="230" Height="23"/>
+        <TextBox Name="txtNumberOfPeople" FontSize="13" Grid.Row="10" Grid.Column="2" Background="Lightgray" Margin="5"/>
+
+        <TextBlock Text="Air Volume Flow Rate (m^3*s^-1)" Grid.Row="11" Grid.Column="0" Grid.ColumnSpan="2" FontSize="13" HorizontalAlignment="Right" VerticalAlignment="center"/>
+        <TextBox Name="txtAirVolFlowRate" Grid.Row="11" Grid.Column="2" Background="Lightgray" Margin="5"/>
+        <TextBlock Text="System Resistance (Pa)" Grid.Row="2" Grid.Column="3" FontSize="13" HorizontalAlignment="center" VerticalAlignment="center"/>
+        <TextBox Name="txtSysRes" Grid.Row="2" Grid.Column="4" Background="Lightgray" Margin="5"/>
+
+        <TextBlock Text="Room Terminal Side Length" Grid.Row="1" Grid.Column="3" FontSize="11" HorizontalAlignment="center" VerticalAlignment="center"/>
+        <TextBox Name="txtRoomTerminalSideLength" Grid.Column="4" Grid.Row="1" Background="#cccccc" FontSize="13"  Margin="5"/>
+
+        <TextBlock Text="Email" Grid.Row="2" Grid.Column="0" FontSize="13" HorizontalAlignment="center" VerticalAlignment="center"/>
+        <TextBox Name="txtEmail" Grid.Column="0" Grid.Row="3" Background="#cccccc" FontSize="13"  Margin="5"/>
+
+        <TextBlock Text="Units for lengths" Background="Transparent" Grid.Row="3" Grid.Column="3" FontSize="13" HorizontalAlignment="center" VerticalAlignment="center"/>
+        <ComboBox Name="txtUnits" Grid.Column="4" Grid.Row="3" Background="Transparent" FontSize="13" HorizontalAlignment="center" VerticalAlignment="center" Margin="4.667,7,4.667,7.333" Width="124">
+            <ComboBoxItem IsSelected="True">Metres</ComboBoxItem>
+            <ComboBoxItem>Feet</ComboBoxItem>
+        </ComboBox>
+    </Grid>
+</Page>

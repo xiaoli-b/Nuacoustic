@@ -1,0 +1,86 @@
+﻿<Page x:Class="Nuacoustic.Project"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Nuacoustic"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Project">
+    <Grid Background="white">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Image Source="/images/nuairelogo1.jpg" Height="46" Grid.Row="0" Grid.Column="0"/>
+
+        <Button Name="btnHome" Content="HOME" Background="Transparent" Grid.Row="0" Grid.Column="1" FontWeight="bold" FontSize="25" Margin="15" Click="btnHome_Click"/>
+        <Button Name="btnEdit" Content="EDIT" Background="Transparent" Grid.Row="1" Grid.Column="0" FontWeight="Bold" FontSize="25" Margin="15" Click="btnEdit_Click"/>
+        <TextBlock Text="UNITS" Background="Transparent" Grid.Row="2" Grid.Column="0" FontWeight="Bold" FontSize="23" Margin="15,14.667,117,15"/>
+        <ComboBox Name="txtUnits" Grid.Column="0" Grid.Row="2" Background="Transparent" FontSize="20"  Margin="88,14.667,15,15">
+            <ComboBoxItem IsSelected="True">Metres</ComboBoxItem>            
+        </ComboBox>
+        <TextBox Name="txtSummary" Grid.Row="3" Grid.Column="0" FontSize="11" Background="Transparent" Margin="5,5,5,15" Grid.RowSpan="4"/>
+
+        <Button Name="btnHowTo" Content="HOW TO" Background="Transparent" Grid.Row="6" Grid.Column="2" FontWeight="Bold" FontSize="25" Margin="15" Click="btnHowTo_Click"/>
+        <Button Name="btnGraduations" Content="GRADUATIONS" Background="Transparent" Grid.Row="6" Grid.Column="1" FontWeight="Bold" FontSize="25" Margin="15" Click="btnGraduations_Click"/>
+
+        <TextBlock Text="Project Name:" Grid.Column="2" FontWeight="bold" FontSize="26" HorizontalAlignment="center" VerticalAlignment="Center"/>
+        <TextBox Name="txtProjectName" Grid.Row="0" Grid.Column="3" FontSize="26" Background="LightGray" Margin="5"/>
+        <Canvas Name="canvas" MouseLeftButtonDown="CanvasMouseLeftButtonDown"
+            MouseLeftButtonUp="CanvasMouseLeftButtonUp"
+            MouseMove="CanvasMouseMove" HorizontalAlignment="Right" VerticalAlignment="Center" Height="320" Width="600" Background="WhiteSmoke" Margin="0,0.333,0,0" Grid.ColumnSpan="3" Grid.RowSpan="5" Grid.Row="1" Grid.Column="1">
+
+            <!-- vertical lines -->
+            <Line Panel.ZIndex="2" X1="0" Y1="00" X2="0" Y2="320" Stroke="Black" StrokeThickness="1"/>
+            <Line Panel.ZIndex="2" X1="40" Y1="00" X2="40" Y2="320" Stroke="Black" StrokeThickness="1"/>
+            <Line Panel.ZIndex="2" X1="80" Y1="00" X2="80" Y2="320" Stroke="Black" StrokeThickness="1"/>
+            <Line Panel.ZIndex="2" X1="120" Y1="00" X2="120" Y2="320" Stroke="Black" StrokeThickness="1"/>
+            <Line Panel.ZIndex="2" X1="160" Y1="00" X2="160" Y2="320" Stroke="Black" StrokeThickness="1"/>
+            <Line Panel.ZIndex="2" X1="200" Y1="00" X2="200" Y2="320" Stroke="Black" StrokeThickness="1"/>
+            <Line Panel.ZIndex="2" X1="240" Y1="00" X2="240" Y2="320" Stroke="Black" StrokeThickness="1"/>
+            <Line Panel.ZIndex="2" X1="280" Y1="00" X2="280" Y2="320" Stroke="Black" StrokeThickness="1"/>
+            <Line Panel.ZIndex="2" X1="320" Y1="00" X2="320" Y2="320" Stroke="Black" StrokeThickness="1"/>
+            <Line Panel.ZIndex="2" X1="360" Y1="00" X2="360" Y2="320" Stroke="Black" StrokeThickness="1"/>
+            <Line Panel.ZIndex="2" X1="400" Y1="00" X2="400" Y2="320" Stroke="Black" StrokeThickness="1"/>
+            <Line Panel.ZIndex="2" X1="440" Y1="00" X2="440" Y2="320" Stroke="Black" StrokeThickness="1"/>
+            <Line Panel.ZIndex="2" X1="480" Y1="00" X2="480" Y2="320" Stroke="Black" StrokeThickness="1"/>
+            <Line Panel.ZIndex="2" X1="520" Y1="00" X2="520" Y2="320" Stroke="Black" StrokeThickness="1"/>
+            <Line Panel.ZIndex="2" X1="560" Y1="00" X2="560" Y2="320" Stroke="Black" StrokeThickness="1"/>
+            <Line Panel.ZIndex="2" X1="600" Y1="00" X2="600" Y2="320" Stroke="Black" StrokeThickness="1"/>
+
+            <!-- horizontal lines -->
+            <Line Panel.ZIndex="2" X1="0" Y1="0" X2="600" Y2="0" Stroke="Black" StrokeThickness="1"/>
+            <Line Panel.ZIndex="2" X1="0" Y1="32" X2="600" Y2="32" Stroke="Black" StrokeThickness="1"/>
+            <Line Panel.ZIndex="2" X1="0" Y1="64" X2="600" Y2="64" Stroke="Black" StrokeThickness="1"/>
+            <Line Panel.ZIndex="2" X1="0" Y1="96" X2="600" Y2="96" Stroke="Black" StrokeThickness="1"/>
+            <Line Panel.ZIndex="2" X1="0" Y1="128" X2="600" Y2="128" Stroke="Black" StrokeThickness="1"/>
+            <Line Panel.ZIndex="2" X1="0" Y1="160" X2="600" Y2="160" Stroke="Black" StrokeThickness="1"/>
+            <Line Panel.ZIndex="2" X1="0" Y1="192" X2="600" Y2="192" Stroke="Black" StrokeThickness="1"/>
+            <Line Panel.ZIndex="2" X1="0" Y1="224" X2="600" Y2="224" Stroke="Black" StrokeThickness="1"/>
+            <Line Panel.ZIndex="2" X1="0" Y1="256" X2="600" Y2="256" Stroke="Black" StrokeThickness="1"/>
+            <Line Panel.ZIndex="2" X1="0" Y1="288" X2="600" Y2="288" Stroke="Black" StrokeThickness="1"/>
+            <Line Panel.ZIndex="2" X1="0" Y1="320" X2="600" Y2="320" Stroke="Black" StrokeThickness="1"/>
+
+            <Image Name="FanSymbol" Panel.ZIndex="40" Source="pack://application:,,,/images/fan-symbol.jpg" Height="32" Canvas.Left="23" Canvas.Top="16" Width="35" />
+            <Image Name="ListenerSymbol" Panel.ZIndex="40" Source="pack://application:,,,/images/listener-symbol.jpg" Height="32" Canvas.Left="23" Canvas.Top="48" Width="35" />
+            <Image Name="SupplySymbol" Panel.ZIndex="40" Source="pack://application:,,,/images/supply-symbol.jpg" Height="32" Canvas.Left="23" Canvas.Top="80" Width="35" />
+            <Image Name="ExtractSymbol" Panel.ZIndex="40" Source="pack://application:,,,/images/extract-symbol.jpg" Height="32" Canvas.Left="23" Canvas.Top="112" Width="35" />
+
+        </Canvas>
+        <Button Name="btnSummary" Content="SUMMARY" Background="Transparent" Grid.Row="6" Grid.Column="3" FontWeight="Bold" FontSize="25" Margin="15" Click="btnSummary_Click"/>
+
+    </Grid>
+</Page>

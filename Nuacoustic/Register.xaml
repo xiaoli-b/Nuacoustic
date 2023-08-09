@@ -1,0 +1,62 @@
+﻿<Page x:Class="Nuacoustic.Register"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Nuacoustic"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Register">
+
+    <Grid Background="white">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Image Source="/images/nuairelogo1.jpg" Grid.Row="0" Grid.Column="0"/>
+        <TextBlock Text="REGISTER" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="28" FontWeight="Bold" Margin="10" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3"/>
+        <Border BorderBrush="#00a3e0" Background="#00a3e0" Grid.Column="2" Grid.Row="0" BorderThickness="1" CornerRadius="17" Margin="1"/>
+        <Button Name="btnClickToLogin" Grid.Column="2" Grid.Row="0" Content="Not first time? Login here" FontWeight="Bold" Background="#00a3e0" Foreground="Black" FontSize="15" Margin="8" Click="btnClickToLogin_Click"/>
+        <!-- first name section-->
+        <TextBlock Text="First Name*" Foreground="black" FontSize="20" Grid.Column="0" Grid.Row="2" Margin="206,10,213.333,10.333" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="txtFirstName" Grid.Column="1" Grid.Row="2" Background ="#cccccc" Margin="150.333,10,10,10.333" Grid.ColumnSpan="2" FontSize="28" />
+        <!--email section-->
+        <TextBlock Text="Email*" Foreground="black" FontSize="20" Grid.Column="0" Grid.Row="3" Margin="249,9.667,213.333,0" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="txtEmail" Grid.Column="1" Grid.Row="3" Background ="#cccccc" Margin="150.333,9.667,10,10" Grid.ColumnSpan="2" FontSize="20" />
+        <!--password section-->
+        <TextBlock Text="Password*" Foreground="black" FontSize="20" Grid.Column="0" Grid.Row="4" Margin="220,10,213.333,10.333" Grid.ColumnSpan="2"/>
+        <PasswordBox PasswordChar="*" x:Name="txtPassword" Grid.Column="1" Grid.Row="4" Background ="#cccccc" Margin="150.333,10,10,10.333" Grid.ColumnSpan="2" FontSize="20"/>
+        <!-- confirm password section-->
+        <TextBlock Text="Confirm Password*" Foreground="black" FontSize="20" Grid.Column="0" Grid.Row="5" Margin="154,9.667,213.333,10" Grid.ColumnSpan="2"/>
+        <PasswordBox PasswordChar="*" x:Name="txtConfirmPass" Grid.Column="1" Grid.Row="5" Background ="#cccccc" Margin="150.333,9.667,10,10" Grid.ColumnSpan="2" FontSize="20" />
+        <!-- admin section-->
+        <TextBlock Text="Admin" Foreground="black" FontSize="20" Grid.Column="0" Grid.Row="6" Margin="249,10,213.333,40.333" Grid.ColumnSpan="2" RenderTransformOrigin="0.531,-0.31" Grid.RowSpan="2"/>
+        <ComboBox Name="txtAdmin" Grid.Column="1" Grid.Row="6" Background="#cccccc" Grid.ColumnSpan="2" FontSize="20"  Margin="150.333,10,10,9.667">
+            <ComboBoxItem IsSelected="True">Unknown</ComboBoxItem>
+            <ComboBoxItem >Yes</ComboBoxItem>
+            <ComboBoxItem>No</ComboBoxItem>
+        </ComboBox>
+        <!--buttons-->
+        <Border BorderBrush="#00a3e0" Background="#00a3e0" Grid.Column="1" Grid.Row="7" BorderThickness="1" CornerRadius="17" Margin="1"/>
+        <Button Name="btnSubmit" Grid.Column="1" Grid.Row="7" Content="SUBMIT" FontWeight="Bold" Background="#00a3e0" Foreground="Black" FontSize="18" Margin="7" Click="btnSubmit_Click"/>
+        <!-- verify -->
+        <Border BorderBrush="#00a3e0" Background="#00a3e0" Grid.Column="1" Grid.Row="9" BorderThickness="1" CornerRadius="17" Margin="1"/>
+        <Button Name="btnVerifyEmail" Grid.Column="1" Grid.Row="9" Content="VERIFY" FontWeight="Bold" Background="#00a3e0" Foreground="Black" FontSize="18" Margin="7" Click="btnVerifyEmail_Click"/>
+        <TextBlock Text="Verification code" Foreground="black" FontSize="20" Grid.Column="0" Grid.Row="8" Margin="167,9.667,213.333,10" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="txtVerifyEmail" Grid.Column="1" Grid.Row="8" Background ="#cccccc" Margin="150.333,9.667,10,10" Grid.ColumnSpan="2" FontSize="28" />
+    </Grid>
+</Page>

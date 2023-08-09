@@ -1,0 +1,20 @@
+﻿<Page x:Class="Nuacoustic.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Nuacoustic"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="MainPage">
+
+    <Grid Background="white">
+        <StackPanel>
+            <Label Content="Welcome to Nuacoustic!" FontSize="40" FontWeight="Bold" HorizontalAlignment="Center" Margin="30"/>
+            <Image Source="/images/nuairelogo1.jpg" Height="178" Margin="262,10,262.333,10" />
+            <Border Background="#00a3e0" CornerRadius="40" Margin="275,1,275,20">
+                <Button x:Name="btnClickToLogin" Content="Click To Login" FontFamily="resources\Montserrat-Regular" FontWeight="Bold" Background="#00a3e0" Margin="10,20,10.333,20" Foreground="Black"  FontSize="25" Click="btnClickToLogin_Click"/>
+            </Border>
+        </StackPanel>
+    </Grid>
+</Page>
